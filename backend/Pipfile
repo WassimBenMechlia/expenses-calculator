@@ -9,8 +9,10 @@ djangorestframework = "*"
 django-heroku = "*"
 pip = "*"
 vercel = "*"
-
+gunicorn = "*"
 [dev-packages]
 
 [requires]
-python_version = "3.10"
+python_version = "3.9"
+[scripts]
+start = "gunicorn main.wsgi"
