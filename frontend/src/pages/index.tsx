@@ -24,9 +24,8 @@ export default function Home( {data ,error }:{data:any,error:any} ) {
   }
 
   const handleSubmit = async() => {
-    console.log("Submit")
     if (charge !== "" && amountVal > 0) {
-      const response = await fetch('http://wassim69.pythonanywhere.com/playground/set' ,{
+      const response = await fetch('https://wassim69.pythonanywhere.com/playground/set' ,{
         method:'POST',
         body : JSON.stringify({expense:charge,amount:amountVal}),
         headers:{
@@ -107,7 +106,7 @@ export async function getStaticProps() {
   let data =[]
   let error=null
   try{
-    const response = await fetch("http://wassim69.pythonanywhere.com/playground/list")
+    const response = await fetch("https://wassim69.pythonanywhere.com/playground/list")
     data = await response.json()
     return {
       props:{
