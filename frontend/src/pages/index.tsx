@@ -8,7 +8,6 @@ import { useState } from 'react';
 
 
 
-
 export default function Home( {data ,error }:{data:any,error:any} ) {
 
   
@@ -24,7 +23,6 @@ export default function Home( {data ,error }:{data:any,error:any} ) {
   }
 
   const handleSubmit = async() => {
-    console.log("Submit")
     if (charge !== "" && amountVal > 0) {
       const response = await fetch('http://wassim69.pythonanywhere.com/playground/set' ,{
         method:'POST',
